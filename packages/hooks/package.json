@@ -1,0 +1,22 @@
+{
+  "name": "@attractor/hooks",
+  "version": "0.0.1",
+  "private": true,
+  "description": "",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "echo 'built shared'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}
