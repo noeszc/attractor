@@ -1,14 +1,28 @@
-"use client";
 import {
   createContext as createReactContext,
   useContext as useReactContext,
 } from "react";
 
-function getErrorMessage(hook, provider) {
+export interface CreateContextOptions<T> {
+  strict?: boolean;
+  hookName?: string;
+  providerName?: string;
+  errorMessage?: string;
+  name?: string;
+  defaultValue?: T;
+}
+
+export type CreateContextReturn<T> = [
+  React.Provider<T>,
+  () => T,
+  React.Context<T>,
+];
+
+function getErrorMessage(hook: string, provider: string) {
   return `${hook} returned \`undefined\`. Seems you forgot to wrap component within ${provider}`;
 }
 
-export function createContext(options = {}) {
+export function createContext<T>(options: CreateContextOptions<T> = {}) {
   const {
     name,
     strict = true,
@@ -18,7 +32,7 @@ export function createContext(options = {}) {
     defaultValue,
   } = options;
 
-  const Context = createReactContext(defaultValue);
+  const Context = createReactContext<T | undefined>(defaultValue);
 
   Context.displayName = name;
 
@@ -37,5 +51,5 @@ export function createContext(options = {}) {
     return context;
   }
 
-  return [Context.Provider, useContext, Context];
+  return [Context.Provider, useContext, Context] as CreateContextReturn<T>;
 }

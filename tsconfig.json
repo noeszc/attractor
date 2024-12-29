@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // Modern JS and DOM features
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+    "allowJs": true,
+
+    // Bundler settings
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+
+    // React JSX support
+    "jsx": "react-jsx",
+
+    // Best practices
+    "strict": true,
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
+  }
+}
