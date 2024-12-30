@@ -1,10 +1,23 @@
 import { Button } from "@attractor/ui";
-import { isFunction } from "@attractor/utils";
 function App() {
   return (
     <>
       <pre>App</pre>
-      <Button>click me</Button>
+      <Button
+        loading
+        onClick={() => {
+          console.log("click");
+        }}
+      >
+        click me
+      </Button>
+      <Button
+        onClick={() => {
+          console.log("click");
+        }}
+      >
+        click me
+      </Button>
     </>
   );
 }
