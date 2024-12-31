@@ -13,6 +13,7 @@ import {
   FormDescription,
   FormMessage,
   Checkbox,
+  Dialog,
 } from "@attractor/ui";
 
 const FormSchema = z.object({
@@ -36,7 +37,18 @@ function App() {
   return (
     <>
       <pre>App</pre>
-
+      <Dialog.Root defaultOpen>
+        <Dialog.Trigger>Open</Dialog.Trigger>
+        <Dialog.Content>
+          <Dialog.Header>
+            <Dialog.Title>Are you absolutely sure?</Dialog.Title>
+            <Dialog.Description>
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </Dialog.Description>
+          </Dialog.Header>
+        </Dialog.Content>
+      </Dialog.Root>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <FormField
