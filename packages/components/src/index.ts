@@ -4,3 +4,4 @@ export * from "./form";
 export * from "./input";
 export * from "./spinner";
 export * from "./dialog";
+export * from "./tabs";

@@ -1,5 +1,5 @@
 export {
-  Form,
+  FormRoot,
   FormItem,
   FormField,
   FormLabel,
@@ -8,3 +8,5 @@ export {
   FormDescription,
   useFormField,
 } from "./form";
+
+export * as Form from "./namespace";
