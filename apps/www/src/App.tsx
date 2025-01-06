@@ -1,9 +1,12 @@
-import { Tabs, Select } from "@attractor/ui";
+import { Avatar, Tabs, Select } from "@attractor/ui";
 
 function App() {
   return (
     <>
       <pre>App</pre>
+      <Avatar.Root>
+        <Avatar.Image src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Jack"></Avatar.Image>
+      </Avatar.Root>
       <Select.Root>
         <Select.Trigger className="w-[180px]">
           <Select.Value placeholder="Select a fruit" />
