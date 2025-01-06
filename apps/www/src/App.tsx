@@ -1,9 +1,24 @@
-import { Tabs, Select } from "@attractor/ui";
+import { DropdownMenu, Avatar, Tabs, Select, Button } from "@attractor/ui";
 
 function App() {
   return (
     <>
       <pre>App</pre>
+
+      <DropdownMenu.Root>
+        <DropdownMenu.Trigger asChild>
+          <Button variant="outline">Open</Button>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content>
+          <DropdownMenu.Item>
+            Log out
+            <DropdownMenu.Shorcut>⇧⌘Q</DropdownMenu.Shorcut>
+          </DropdownMenu.Item>
+        </DropdownMenu.Content>
+      </DropdownMenu.Root>
+      <Avatar.Root>
+        <Avatar.Image src="https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Jack"></Avatar.Image>
+      </Avatar.Root>
       <Select.Root>
         <Select.Trigger className="w-[180px]">
           <Select.Value placeholder="Select a fruit" />
