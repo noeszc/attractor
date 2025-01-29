@@ -1,10 +1,33 @@
-import { DropdownMenu, Avatar, Tabs, Select, Button } from "@attractor/ui";
+import {
+  DropdownMenu,
+  Avatar,
+  Tabs,
+  Select,
+  Button,
+  useToast,
+  ToastAction,
+} from "@attractor/ui";
 
 function App() {
+  const { toast } = useToast();
   return (
     <>
       <pre>App</pre>
-
+      <Button
+        variant="outline"
+        onClick={() => {
+          toast({
+            variant: "destructive",
+            title: "Scheduled: Catch up ",
+            description: "Friday, February 10, 2023 at 5:57 PM",
+            action: (
+              <ToastAction altText="Goto schedule to undo">Undo</ToastAction>
+            ),
+          });
+        }}
+      >
+        Add to calendar
+      </Button>
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
           <Button variant="outline">Open</Button>
