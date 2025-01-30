@@ -1,0 +1,16 @@
+{
+  "name": "@attractor/rest",
+  "version": "0.0.1",
+  "description": "",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "echo 'built shared'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ky": "1.7.4"
+  }
+}
